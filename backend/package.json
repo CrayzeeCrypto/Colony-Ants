@@ -1,0 +1,31 @@
+{
+  "name": "colony-ants-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'No tests defined yet'"
+  },
+  "keywords": [
+    "neo",
+    "neox",
+    "meme",
+    "colony-ants",
+    "blockchain", 
+    "smart-contracts"
+  ],
+  "author": "Colony Ants",
+  "license": "MIT",
+  "description": "Smart contracts for Colony Ants, including the Colony Ant token and Colony Map contract on the NeoX blockchain.",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.16"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0",
+    "ethers": "^6.13.4"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

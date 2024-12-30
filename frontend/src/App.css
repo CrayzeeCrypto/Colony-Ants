@@ -1,0 +1,172 @@
+/* src/App.css */
+
+.App {
+  text-align: center;
+  height: 100vh;
+  background-color: #282c34;
+  margin: 0;
+  padding: 0;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.page-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.header-with-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-with-image h1 {
+  font-size: 3em;
+  margin: 0 0 5px 0;
+}
+
+.header-with-image h2 {
+  font-size: 2em;
+  margin: 0;
+  font-weight: normal;
+}
+
+.ant-image {
+  height: 200px;
+  width: auto;
+}
+
+.Contribution {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.ContributionLabel {
+  display: flex;
+  align-items: center;
+}
+
+.ContributionWrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.ContributionLimit {
+  font-size: 0.8em;
+  color: gray;
+  margin-left: 10px;
+}
+
+.wallet-instructions {
+  text-align: left;
+}
+
+.wallet-instructions p {
+  font-size:20px;
+}
+
+.wallet-instructions ol {
+  padding-left: 20px;
+  font-size:13px;
+}
+
+.wallet-instructions li {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.wallet-instructions li a:visited {
+  color: #8B0000; /* Dark Red */
+}
+
+.contributions-display {
+  text-align: left;
+  margin: 20px 0;
+  font-size:14px;
+}
+
+.contributions-display ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contributions-display li {
+  margin-bottom: 5px;
+}
+
+.instructions-container, .contributions-container {
+  align-self: flex-start;
+  margin: 10px;
+  width: 30%;
+}
+
+.error-message {
+  color: red; 
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

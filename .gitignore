@@ -1,0 +1,8 @@
+# Common ignores for both frontend and backend
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.DS_Store
+node_modules
