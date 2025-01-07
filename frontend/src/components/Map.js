@@ -198,10 +198,9 @@ const Map = () => {
 					await approveTokens(colonyMapAddress, currentAmount)
 				}
 				
-				const tx = await colonyMap.contribute(countryCode, amount, { gasPrice: 40000000000, gasLimit: 500000 });
+				const tx = await colonyMap.contribute(countryCode, amount, { gasLimit: 500000 });
 				const transaction = await provider.getTransaction(tx.hash);
 				await transaction.wait();
-				//const countryName = countryData[countryCode]?.name || countryCode;
       			alert(`You have successfully contributed ${currentAmount} Colony Ant to the ${countryName} Colony!`);
 				setTransactionStatus(`You have successfully contributed ${currentAmount} Colony Ant to the ${countryName} Colony at  ${new Date().toLocaleTimeString()}!`);
 				await fetchAndSetContributions(colonyMap);
