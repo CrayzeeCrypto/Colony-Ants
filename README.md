@@ -19,7 +19,7 @@ Colony Ants is a decentralized application (dApp) centered around the Colony Ant
 ### Steps
 1. **Clone the Repository:**  
    ```sh
-   git clone (https://github.com/CrayzeeCrypto/Colony-Ants.git
+   git clone https://github.com/CrayzeeCrypto/Colony-Ants.git
    ```
 
 2. **Navigate to project directory:**  
