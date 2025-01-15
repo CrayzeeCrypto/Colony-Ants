@@ -24,7 +24,7 @@ Colony Ants is a decentralized application (dApp) centered around the Colony Ant
 
 2. **Navigate to project directory:**  
    ```sh
-   cd colony-ants/frontend
+   cd Colony-Ants/frontend
    ```
    
 2. **Install Dependencies:**  
@@ -78,7 +78,14 @@ Colony Ants is a decentralized application (dApp) centered around the Colony Ant
 ---
 
 ## Extending the Ecosystem
-The **Colony Map** is open for community development. Feel free to create new interfaces or uses for interacting with the Colony Ant token, while the Colony Ant coin and its smart contract remain stable and unchanged.
+
+The **Colony Map** is designed to be expanded by the community. This means:
+
+- You are encouraged to develop new ways to interact with the **ColonyAnt token**. This could include building new user interfaces or applications that make use of the token in innovative ways.
+- However, the **ColonyAnt token itself**, along with its underlying smart contract, will **not change**. This ensures stability and consistency in the core functionality and value of the coin.
+
+In essence, while the core aspects of the project (the ColonyAnt token and its smart contract) remain constant, the community is invited to enhance and expand the ecosystem around the ColonyAnt token by creating new tools, interfaces, or applications (such as the Colony Map).
+
 ---
 
 ## Architecture Overview
