@@ -14,7 +14,7 @@ Colony Ants is a decentralized application (dApp) centered around the ColonyAnt 
 ### Prerequisites
 - Node.js v14 or later (22.11.0 used for development and testing)  
 - npm or Yarn
-- MetaMask for wallet interaction (for local testing with NeoX)  
+- MetaMask for wallet interaction
 
 ### Steps
 1. **Clone the Repository:**  
