@@ -1,7 +1,7 @@
 # Colony Ants
 
 ## Project Overview
-Colony Ants is a decentralized application (dApp) centered around the Colony Ant coin and its associated smart contracts on the NeoX blockchain. The primary interface, **Colony Map**, allows users to contribute Colony Ants to build virtual colonies in different countries visualized on a world map. However, the Colony Ant coin and smart contracts are designed to be versatile, enabling integration with various interfaces beyond the initial Colony Map.
+Colony Ants is a decentralized application (dApp) centered around the ColonyAnt token and its associated smart contracts on the NeoX blockchain. The primary interface, the **Colony Map**, allows users to contribute Colony Ants to build virtual colonies in different countries visualized on a world map. However, the ColonyAnt token and smart contract are designed to be versatile, enabling integration with various interfaces beyond the initial Colony Map.
 
 ### Key Features:
 - **Colony Map Interface:** A React application where users can interactively contribute to country-specific colonies.  
@@ -36,7 +36,6 @@ Colony Ants is a decentralized application (dApp) centered around the Colony Ant
 
 4. **Run the Application:**  
 
-   For the frontend:  
    ```sh
    npm start
    ```
@@ -102,8 +101,6 @@ This project is licensed under the MIT License [LICENSE.md](LICENSE.md). This li
 ## FAQ/Troubleshooting
 - **Q: My contributions aren't showing up on the map?**  
   A: Ensure your wallet is connected to NeoX, that you have approved the two transactions, and you've waited for the transaction to be mined.  
-- **Q: I'm seeing errors with smart contract interactions?**  
-  A: Check if your environment variables are set correctly and your wallet has the necessary permissions.  
 - **Q: Can I use Colony Ant coins with another application?**  
   A: Yes! The Colony Ant token is designed to be used with various interfaces. Feel free to develop new uses or interfaces.  
 
