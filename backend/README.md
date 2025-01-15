@@ -87,17 +87,13 @@ npx hardhat compile
 ```
 
 ### Deploying Contracts
+Note: Adjust deploy.js script to only deploy the desired smart contract
 ```sh
 npx hardhat run scripts/deploy.js --network [network-name]
 ```
 Replace [network-name] with one of the following network configurations defined in hardhat.config.js:
 - neoxTestnet for the NeoX testnet.
 - neoxMainnet for the NeoX mainnet.
-
-## Environment Variables
-- NEOX_RPC_URL: RPC URL for connecting to the NeoX network.
-- COLONY_ANT_CONTRACT: Address of the deployed ColonyAnt contract.
-- COLONY_MAP_CONTRACT: Address of the deployed ColonyMap contract.
 
 ## Interaction
 - Use methods like contribute to add to a country's colony, battle to engage in game mechanics, and getCountryContributions for querying.
