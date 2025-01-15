@@ -12,46 +12,35 @@ Colony Ants is a decentralized application (dApp) centered around the Colony Ant
 ## Installation
 
 ### Prerequisites
-- Node.js >=22.11.0 (Current version used for development and testing)  
-- npm or Yarn (npm is assumed here)  
+- Node.js v14 or later (22.11.0 used for development and testing)  
+- npm or Yarn
 - MetaMask for wallet interaction (for local testing with NeoX)  
 
 ### Steps
 1. **Clone the Repository:**  
    ```sh
-   git clone [your-repository-url]
-   cd colony-ants-frontend
+   git clone (https://github.com/CrayzeeCrypto/Colony-Ants.git
+   ```
+
+2. **Navigate to project directory:**  
+   ```sh
+   cd colony-ants/frontend
    ```
    
 2. **Install Dependencies:**  
    ```sh
    npm install
+   # or
+   npm yarn
    ```
-
-3. **Set up Environment Variables:**  
-   Create a `.env` file in the root directory of both frontend and backend:  
-   ```plaintext
-   REACT_APP_NEOX_RPC_URL=[your-rpc-url]
-   REACT_APP_COLONY_MAP_CONTRACT=[your-contract-address]
-   REACT_APP_COLONY_ANT_CONTRACT=[your-colony-ant-contract-address]
-   ```
-   *Note: These values should be set in Vercel's environment variables for production.*  
 
 4. **Run the Application:**  
 
    For the frontend:  
    ```sh
-   cd frontend
    npm start
    ```
    This will start the development server at `localhost:3000`.  
-
-   For the backend (if applicable, assuming Hardhat for smart contract testing/deployment):  
-   ```sh
-   cd backend
-   npx hardhat node
-   ```
-   This starts a local Ethereum node for development.  
 
 ---
 
@@ -90,22 +79,6 @@ Colony Ants is a decentralized application (dApp) centered around the Colony Ant
 
 ## Extending the Ecosystem
 The **Colony Map** is open for community development. Feel free to create new interfaces or uses for interacting with the Colony Ant token, while the Colony Ant coin and its smart contract remain stable and unchanged.
----
-
-## Deployment
-
-### Vercel Deployment
-Ensure you have environment variables set in Vercel:  
-- `NEOX_RPC_URL`  
-- `COLONY_MAP_CONTRACT`  
-- `COLONY_ANT_CONTRACT`  
-
-Deploy via:  
-```sh
-cd frontend
-vercel --prod
-```
-
 ---
 
 ## Architecture Overview
