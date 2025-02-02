@@ -1,14 +1,50 @@
 require('dotenv').config({ path: '../../.env' });
 const colonyMapABI = require('../artifacts/contracts/ColonyMap.sol/ColonyMap.json').abi;
 const { ethers } = require("ethers");
+const readline = require('readline');
 
 // TO RUN THIS SCRIPT: navigate to backend\scripts and then run 'node battleColonies.js'
 
-const CONTRACT_ADDRESS = process.env.COLONY_MAP_CONTRACT_ADDRESS;
+const CONTRACT_ADDRESS = process.env.COLONY_MAP_CONTRACT_ADDRESS; // Verify contract address is correct
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
-const RPC_URL = process.env.NEOX_TESTNET_RPC_URL;
+const RPC_URL = process.env.NEOX_MAINNET_RPC_URL; // Verify switched to correct network (MAINNET or TESTNET)
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+function askQuestion(query) {
+    return new Promise(resolve => rl.question(query, resolve));
+}
 
 async function main() {
+    console.log("Please confirm the following details before proceeding:");
+    console.log("CONTRACT_ADDRESS:", CONTRACT_ADDRESS);
+    console.log("RPC_URL:", RPC_URL);
+
+    const confirmEnv = await askQuestion("Do you confirm these environment details? (yes/no) ");
+    if (confirmEnv.toLowerCase() !== 'yes') {
+        console.log("Script terminated. Please check your environment variables.");
+        rl.close();
+        return;
+    }
+
+    // Enter the top two countries
+    const attacker = "US"; // Verify attacker and defender country codes
+    const defender = "CN"; // Verify attacker and defender country codes
+
+    console.log("The battle is set to occur between:");
+    console.log("Attacker:", attacker);
+    console.log("Defender:", defender);
+
+    const confirmBattle = await askQuestion("Do you confirm these countries for the battle? (yes/no) ");
+    if (confirmBattle.toLowerCase() !== 'yes') {
+        console.log("Script terminated. Please verify the country codes.");
+        rl.close();
+        return;
+    }
+
     // Connect to the network
     const provider = new ethers.JsonRpcProvider(RPC_URL);
     
@@ -17,10 +53,6 @@ async function main() {
     
     // Create contract instance
     const contract = new ethers.Contract(CONTRACT_ADDRESS, colonyMapABI, wallet);
-
-    // Here we're assuming US and CN are the top two countries
-    const attacker = "US";
-    const defender = "CN";
 
     try {
         // Call the battle function
@@ -52,7 +84,9 @@ async function main() {
             console.error("Error executing battle:", error.message);
         }
     }
+    rl.close();
 }
+
 main().catch((error) => {
     console.error(error);
     process.exit(1);
